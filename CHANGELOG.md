@@ -1,3 +1,6 @@
+## 4.2.1
+- Fix migrations to allow running them with a custom DB.
+
 ## 4.2.0
 - compatibility with Python up to 3.10 and Django up to 3.2
 - integration with github CI instead of travis
@@ -19,7 +22,7 @@
 
 **BREAKING** This is a major release version because it
 breaks the existing API.
-Changes have been made to the `create()` method on the `AuthToken` model. 
+Changes have been made to the `create()` method on the `AuthToken` model.
 It now returns the model instance and the raw `token` instead
 of just the `token` to allow the `expiry` field to be included in the
 success response.
@@ -61,7 +64,7 @@ Our release cycle was broken since 3.1.5, hence you can not find the previous re
     `Token` object by default
     now.`USER_SERIALIZER` must be overridden to return more
     data.
-    
+
 -   Introduce new setting `MIN_REFRESH_INTERVAL` to configure the time
     interval (in seconds) to wait before a token is automatically refreshed.
 
